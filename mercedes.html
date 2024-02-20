@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Auto4Sale</title>
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="center">
+        <!-- Container for the image gallery -->
+        <div class="container">
+
+          <!-- Full-width images with number text -->
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+              <img src="Images/Mercedes/Benz%20Vclass.jfif" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+              <img src="Images/Mercedes/Front%20View.jfif" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+              <img src="Images/Mercedes/Interior.jfif" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+              <img src="Images/Mercedes/Interior2.jfif" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+              <img src="Images/Mercedes/Back%20Side%20View.jfif" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+              <img src="Images/Mercedes/side%20view.jfif" style="width:100%">
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <!-- Image text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="Images/Mercedes/Benz%20Vclass.jfif" style="width:100%" onclick="currentSlide(1)" alt="V class">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="Images/Mercedes/Front%20View.jfif" style="width:100%" onclick="currentSlide(2)" alt="Front View">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="Images/Mercedes/Interior.jfif" style="width:100%" onclick="currentSlide(3)" alt="Interior">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="Images/Mercedes/Interior2.jfif" style="width:100%" onclick="currentSlide(4)" alt="Interior2">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="Images/Mercedes/Back%20Side%20View.jfif" style="width:100%" onclick="currentSlide(5)" alt="Back Side View">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="Images/Mercedes/side%20view.jfif" style="width:100%" onclick="currentSlide(6)" alt="Side View">
+            </div>
+             
+          </div>
+            <div class="container-header">
+                <h1>2023 Mercedes-Benz V-Class V300d Exclusive AMG Line</h1>
+            </div>
+            
+            <div class="container-info">
+                <p>
+                    <b>Used Car:</b> 2023 | 47 km | Automatic | Desiel
+                </p>
+                <br>
+                <p>
+                    <b>Seller's Comment</b>
+                    <br>
+                    Brand New LUMMA Brilliance - Exceptional Design - 19" LUMMA Alloys - Panoramic Glass Sunroof - PDC - 360 Degree Cameras - Nappa Leather - Burmester Hifi - The Ultimate Family Wagon!
+                </p>
+                <br>
+                <p>
+                    <b>Summary</b>
+                    <br>
+                    Embark on a journey of unparalleled luxury and versatility with the 2023 Mercedes-Benz V-Class V300d Exclusive AMG Line, where opulence meets practicality. This automotive masterpiece redefines the essence of travel, with its distinctive AMG Line design exuding a timeless elegance. The meticulously crafted interior transforms every excursion into a first-class experience, seamlessly blending advanced technology, sumptuous materials, and versatile space. Elevate your travels with a vehicle that transcends the conventional, promising a harmonious fusion of performance, style, and the art of refined travel.
+                    Features: Sunroof, Electric Sliding Doors,Electric Tailgate, Leather, PDC Rear, Reverse Camera, NVP, PDC Front, 360° Camera, Lane Assist
+                    Multi Function Steering, Touch Screen Radio, App Connect, Bluetooth, Adaptive Cruise Control, Keyless Entry, Wi-Fi, Digital
+                    Cockpit, Factory Maintenance Plan.
+                </p>
+            </div>
+        </div>
+        </div>
+        
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("demo");
+              let captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+        
+    </body>
+</html>
